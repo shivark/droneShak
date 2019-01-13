@@ -6,9 +6,5 @@
         "quotes": ["error", "single"],
         "eol-last": ["error", "never"],
         "indent": ["error", 4]
-    },
-    "plugins": ["jasmine"],
-    "env": {
-        "jasmine": true
     }
 }

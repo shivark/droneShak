@@ -4,11 +4,12 @@
     "description": "Flock cover task 1",
     "main": "start.mjs",
     "scripts": {
-        "start": "node --experimental-modules --inspect start.mjs",
+        "start": "node --experimental-modules start.mjs",
+        "debug": "node --experimental-modules --inspect start.mjs",
         "watch": "nodemon --experimental-modules --inspect start.mjs",
-        "lint": "node_modules/.bin/eslint *.mjs  --fix",
+        "lint": "node_modules/.bin/eslint ./**/*.mjs --fix",
         "mockserver": "node ./node_modules/.bin/mockserver -p 8080 -m mock-ureliable-api",
-        "test": "jasmine",
+        "test": "jasmine"
     },
     "repository": {
         "type": "git",
@@ -40,8 +41,6 @@
         "eslint-plugin-node": "^8.0.1",
         "eslint-plugin-promise": "^4.0.1",
         "eslint-plugin-standard": "^4.0.0",
-        "jasmine": "^3.3.1",
-        "jasmine-es6": "^0.4.3",
         "mockserver": "^2.2.0",
         "nodemon": "^1.18.9"
     }
