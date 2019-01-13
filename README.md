@@ -23,10 +23,12 @@
 
 ## Todos  
 
+* TDD
 * Import file path is anti pattern fix it to be absolute!
 * Add route versioning, in a way that it's seamless to the end user but it will maintenance. 
 * Do more functional programming 
 * Add e2e test
 * Add better error handling
 * Add analytics to measure to log response time. 
+* Fix lint errors
 
