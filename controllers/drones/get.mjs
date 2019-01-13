@@ -7,7 +7,6 @@ const get = async(req, respond) => {
 
     try {
         const data = await fetchData(url);
-        console.log(data);
         await respond.send(data);
         cache.set(url, data);
 
