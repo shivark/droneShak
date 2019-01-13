@@ -13,11 +13,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
-  res.header('Content-Type', 'application/json');
-  next();
+    res.header('Content-Type', 'application/json');
+    next();
 });
 app.use('/', indexRouter);
 app.use((req, res, next) => {
-  next(createHttpError(404));
+    next(createHttpError(404));
 });
 app.use(errorHandler);
