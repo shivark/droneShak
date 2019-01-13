@@ -22,7 +22,6 @@
         "url": "https://github.com/shivark/droneShak/issues"
     },
     "homepage": "https://github.com/shivark/droneShak#readme",
-
     "dependencies": {
         "cookie-parser": "~1.4.3",
         "debug": "~2.6.9",
@@ -34,6 +33,12 @@
         "redis": "^2.8.0"
     },
     "devDependencies": {
+        "eslint": "^5.12.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
         "jasmine": "^3.3.1",
         "jasmine-es6": "^0.4.3",
         "mockserver": "^2.2.0",
