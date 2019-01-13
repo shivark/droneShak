@@ -1,0 +1,39 @@
+{
+    "name": "droneshak",
+    "version": "1.0.0",
+    "description": "Flock cover task 1",
+    "main": "start.mjs",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shivark/droneShak.git"
+    },
+    "keywords": [
+        "drone"
+    ],
+    "author": "Shiva Karimi",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/shivark/droneShak/issues"
+    },
+    "homepage": "https://github.com/shivark/droneShak#readme",
+
+    "dependencies": {
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.9",
+        "dotenv": "^6.2.0",
+        "express": "~4.16.0",
+        "http-errors": "~1.6.2",
+        "morgan": "~1.9.0",
+        "node-fetch": "^2.3.0",
+        "redis": "^2.8.0"
+    },
+    "devDependencies": {
+        "jasmine": "^3.3.1",
+        "jasmine-es6": "^0.4.3",
+        "mockserver": "^2.2.0",
+        "nodemon": "^1.18.9"
+    }
+}
