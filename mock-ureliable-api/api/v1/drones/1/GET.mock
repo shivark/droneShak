@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+   "id": 1,
+   "name": "drone one",
+   "flying": 0,
+   "videoEnabled": 0,
+   "visionEnabled": 1,
+   "controlAlgorithm": 0,
+   "altitudeControlAlgorithm": 1,
+   "startButtonState": 0,
+   "controlCommandAck": 1,
+   "cameraReady": 1,
+   "travellingEnabled": 0,
+   "usbReady": 0,
+   "navdataDemo": 0,
+   "navdataBootstrap": 0,
+   "motorProblem": 0,
+   "communicationLost": 0,
+   "softwareFault": 0,
+   "lowBattery": 0
+}

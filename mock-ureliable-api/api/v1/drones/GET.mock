@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+   "drones": [
+      {
+         "id": 1,
+         "name": "Drone one"
+      },
+      {
+         "id": 2,
+         "name": "Drone two"
+      }
+   ]
+}

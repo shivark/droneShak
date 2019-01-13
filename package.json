@@ -7,7 +7,8 @@
         "start": "node --experimental-modules --inspect start.mjs",
         "watch": "nodemon --experimental-modules --inspect start.mjs",
         "test": "jasmine",
-        "lint": "node_modules/.bin/eslint *.mjs  --fix"
+        "lint": "node_modules/.bin/eslint *.mjs  --fix",
+        "mockserver": "node ./node_modules/.bin/mockserver -p 8080 -m mock-ureliable-api"
     },
     "repository": {
         "type": "git",
