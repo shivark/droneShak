@@ -1,14 +1,8 @@
 import fetchData from './fetch-data.mjs';
-import toUrl from './../../utils/to-url.mjs';
 import useCacheOnFail from './use-cache-on-fail.mjs';
 import compose from './../../utils/compose.mjs';
 import cacheResponse from './cache-response.mjs';
-
-const createUri = ({
-    resource,
-    cb,
-    uri = toUrl({ urlBase: process.env.UNRELIABLE_API_URL_BASE, version: 'v1', resource: 'drones' })
-}) => ({ uri, cb });
+import createUri from './create-uri.mjs';
 
 const resilientFetch = compose(
     useCacheOnFail,
