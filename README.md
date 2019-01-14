@@ -21,15 +21,11 @@
  * Make sure to stop unreliable API 
  * Hit http://localhost:3000/ in browser
 
-## Run tests
 
-* Unit tests: `npm run test`
-* e2e tests: tba
-
-## Todos  
+## Todos 
 
 * TDD
-* Refactore drone controller functions to be more consistant  
+* Refactore drone controller functions to be more consistant (currently is combination of Promise and async await)
 * Import file path is anti pattern fix it to be absolute!
 * Add route versioning, in a way that it's seamless to the end user but it will maintenance. 
 * Do more functional programming 
