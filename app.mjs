@@ -4,10 +4,12 @@ import morgan from 'morgan';
 import errorHandler from './utils/error-handler.mjs';
 import { router as indexRouter } from './routes/v1/index.mjs';
 import dotenv from 'dotenv';
+import cache from './cache/index.mjs';
 
 export const app = express();
 
 dotenv.config();
+cache.init();
 
 app.use(morgan('dev'));
 app.use(express.json());
