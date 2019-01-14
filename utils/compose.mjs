@@ -1,0 +1,1 @@
+export default (...fns) => i => fns.reduceRight((p, c) => c(p), i);

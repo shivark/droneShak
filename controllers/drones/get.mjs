@@ -1,26 +1,27 @@
-import fetchData from './../fetch-data.mjs';
-import cache from './../../cache/index.mjs';
-import toUrl from './../../utils/to-url.mjs'
+import fetchData from './fetch-data.mjs';
+import toUrl from './../../utils/to-url.mjs';
+import useCacheOnFail from './use-cache-on-fail.mjs';
+import compose from './../../utils/compose.mjs';
+import cacheResponse from './cache-response.mjs';
 
-const get = async(req, respond) => {
-    const url = toUrl({ urlBase: process.env.UNRELIABLE_API_URL_BASE, version: 'v1', resource: 'drones' });
+const createUri = ({
+    resource,
+    cb,
+    uri = toUrl({ urlBase: process.env.UNRELIABLE_API_URL_BASE, version: 'v1', resource: 'drones' })
+}) => ({ uri, cb });
 
-    try {
-        const data = await fetchData(url);
-        await respond.send(data);
-        cache.set(url, data);
+const resilientFetch = compose(
+    useCacheOnFail,
+    cacheResponse,
+    fetchData,
+    createUri
+);
 
-    } catch (error) {
+const get = async(req, response) => {
 
-        try {
-            let cachedData = await cache.get(url);
-            respond.send(cachedData);
-
-        } catch {
-            //user error handler function
-            respond.status(404).send({ error: 'No data is available at the moment.' }).end();
-        }
-    }
-}
+    const sendResponse = async(data) => response.send(data);
+    //todo get resource 'drones' from request
+    await resilientFetch({ resource: 'drones', cb: sendResponse });
+};
 
 export default get;
